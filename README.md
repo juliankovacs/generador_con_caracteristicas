@@ -1,46 +1,38 @@
-# **Análisis de Imágenes y Generación de Prompts con Stable Diffusion**
+# Análisis de Imágenes y Generación de Imágenes con Stable Diffusion  
 
-Este proyecto implementa un sistema que analiza características visuales de imágenes y genera un **prompt personalizado** para herramientas de generación de imágenes como **Stable Diffusion**. Incluye análisis de brillo, contraste, textura y una paleta de colores dominantes.
+Este proyecto implementa un sistema completo para analizar características visuales de imágenes y generar prompts personalizados para herramientas como Stable Diffusion. Además, incluye la funcionalidad de regenerar imágenes basadas en características seleccionadas por el usuario mediante una interfaz gráfica interactiva.  
 
-## **Características del Proyecto**
-- **Análisis de Imágenes:**
-  - Cálculo de brillo, contraste y textura.
-  - Generación de una paleta de colores dominantes utilizando K-Means.
-- **Comparación de Imágenes:**
-  - Determinación de la imagen ganadora basada en características analizadas.
-  - Historial de características almacenadas.
-- **Generación de Prompts:**
-  - Creación de descripciones detalladas para aplicaciones como Stable Diffusion.
-  - Inclusión de características visuales y colores dominantes.
+## Características del Proyecto  
 
-## **Requisitos**
-- Python 3.8+
-- Bibliotecas necesarias:
-  - `opencv-python`
-  - `numpy`
-  - `matplotlib`
-  - `scikit-learn`
+### 1. Análisis de Imágenes  
+- **Cálculo de características visuales**:  
+  - Brillo promedio.  
+  - Contraste promedio.  
+  - Textura medida.  
+  - Paleta de colores dominantes (utilizando K-Means).  
 
-Puedes instalar las dependencias ejecutando:
+- **Comparación de imágenes**:  
+  - Determina una imagen ganadora basada en características analizadas.  
+  - Almacena un historial de características.  
 
-```bash
-pip install opencv-python numpy matplotlib scikit-learn`
-```
-## **Uso**
-- **Carga de Imágenes**
-  Especifica las rutas de dos imágenes en las variables ruta_imagenA y ruta_imagenB.
+### 2. Generación de Prompts  
+- **Creación de descripciones detalladas** para aplicaciones como Stable Diffusion.  
+- **Incorporación de características visuales** y paletas de colores dominantes al prompt.  
 
-- **Análisis y Comparación**
-  El script analizará ambas imágenes y determinará la ganadora según las características.
+### 3. Generación de Imágenes  
+- Genera imágenes a partir de dos iniciales, analizando características seleccionadas.  
+- Permite la selección interactiva de imágenes mediante una interfaz gráfica simple con PySimpleGUI.  
+- Regenera nuevas imágenes basadas en las elecciones del usuario.  
 
-- **Generación de Prompt**
-Se genera un prompt para crear una imagen con características similares a la ganadora.
+## Requisitos  
 
-- **Ejecución del Script**
-  Ejecuta el script principal:
+Para ejecutar este proyecto, asegúrate de tener instalados los siguientes requisitos:  
+
+- **Python**: Versión 3.8 o superior.  
+- **Bibliotecas necesarias**:  
 
 ```bash
-python script.py
+pip install opencv-python numpy matplotlib sklearn diffusers PySimpleGUI Pillow
 ```
 ## **Resultados**
 Los resultados incluyen:
